@@ -1,0 +1,31 @@
+{
+  "name": "covid-19-chatbot",
+  "version": "1.0.0",
+  "description": "Telegram chatbot developed as part of APUs Artificial Intelligence module to track COVID-19 cases statistics and data.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvlvstepan/covid-19-chatbot.git"
+  },
+  "keywords": [
+    "chatbot",
+    "telegram",
+    "api",
+    "covid-19",
+    "bot"
+  ],
+  "author": "Stepan Pavlov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pvlvstepan/covid-19-chatbot/issues"
+  },
+  "homepage": "https://github.com/pvlvstepan/covid-19-chatbot#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "telegraf": "^4.4.0"
+  }
+}
