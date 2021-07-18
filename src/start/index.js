@@ -1,6 +1,7 @@
 import worldwide from './worldwide/index.js';
 
 const startMenu = (bot) => {
+  // menu structure
   const startMenuContents = (ctx) => {
     ctx.telegram.sendMessage(
       ctx.chat.id,
@@ -16,6 +17,7 @@ const startMenu = (bot) => {
     );
   };
 
+  // initialize menu
   bot.start((ctx) => {
     startMenuContents(ctx);
   });
