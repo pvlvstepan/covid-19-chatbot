@@ -17,23 +17,24 @@ const total = (bot) => {
           let localTime = new Date(date);
           localTime = localTime.toLocaleString().toUpperCase();
 
-          const response = `
-          Total COVID-19 cases as of ${localTime}\n\n${results.cases.toLocaleString()}\n\nNew cases: ${results.todayCases.toLocaleString()}`;
+          const response = `🦠📉 Total COVID-19 cases as of <b><i>${localTime}</i></b> 📉🦠\n\n\n⭕📊 <b>${results.cases.toLocaleString()}</b>\n\n🦠📈 New cases: <b>${results.todayCases.toLocaleString()}</b>`;
 
           ctx.telegram.sendMessage(ctx.chat.id, response,
             {
+              parse_mode: 'HTML',
               reply_markup: {
                 inline_keyboard: [
-                  [{ text: 'Go back', callback_data: 'go-back-to-worldwide' }],
+                  [{ text: '◀ Go back ◀', callback_data: 'go-back-to-worldwide' }],
                 ]
               }
             });
         } else {
-          ctx.telegram.sendMessage(ctx.chat.id, 'Something went wrong...',
+          ctx.telegram.sendMessage(ctx.chat.id, 'Something went wrong... 😔',
             {
+              parse_mode: 'HTML',
               reply_markup: {
                 inline_keyboard: [
-                  [{ text: 'Go back', callback_data: 'go-back-to-worldwide' }],
+                  [{ text: '◀ Go back ◀', callback_data: 'go-back-to-worldwide' }],
                 ]
               }
             });

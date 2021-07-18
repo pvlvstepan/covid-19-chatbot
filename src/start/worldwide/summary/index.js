@@ -16,23 +16,24 @@ const summary = (bot) => {
           let localTime = new Date(date);
           localTime = localTime.toLocaleString().toUpperCase();
 
-          const response = `
-          COVID-19 cases summary as of ${localTime}\n\nTotal cases: ${results.cases.toLocaleString()}\nNew cases: ${results.todayCases.toLocaleString()}\nTotal deaths: ${results.deaths.toLocaleString()}\nNew deaths: ${results.todayDeaths.toLocaleString()}\nTotal recovered: ${results.recovered.toLocaleString()}\nNew recoveries: ${results.todayRecovered.toLocaleString()}\nActive cases: ${results.active.toLocaleString()}\nIn critical condition: ${results.critical.toLocaleString()}\n\nAffected countries: ${results.affectedCountries}`;
+          const response = `🦠☣ COVID-19 cases summary as of <b><i>${localTime}</i></b> ☣🦠\n\n\n🦠📉 Total cases: <b>${results.cases.toLocaleString()}</b>\n\n🦠📈 New cases: <b>${results.todayCases.toLocaleString()}</b>\n\n🦠⚰ Total deaths: <b>${results.deaths.toLocaleString()}</b>\n\n🦠😔 New deaths: <b>${results.todayDeaths.toLocaleString()}</b>\n\n🦠✅ Total recovered: <b>${results.recovered.toLocaleString()}</b>\n\n🦠⏰ New recoveries: <b>${results.todayRecovered.toLocaleString()}</b>\n\n🦠🤒 Active cases: <b>${results.active.toLocaleString()}</b>\n\n🦠😵 In critical condition: <b>${results.critical.toLocaleString()}</b>\n\n🦠🗾 Affected countries: <b>${results.affectedCountries}</b>`;
 
           ctx.telegram.sendMessage(ctx.chat.id, response,
             {
+              parse_mode: 'HTML',
               reply_markup: {
                 inline_keyboard: [
-                  [{ text: 'Go back', callback_data: 'go-back-to-worldwide' }],
+                  [{ text: '◀ Go back ◀', callback_data: 'go-back-to-worldwide' }],
                 ]
               }
             });
         } else {
-          ctx.telegram.sendMessage(ctx.chat.id, 'Something went wrong...',
+          ctx.telegram.sendMessage(ctx.chat.id, 'Something went wrong... 😔',
             {
+              parse_mode: 'HTML',
               reply_markup: {
                 inline_keyboard: [
-                  [{ text: 'Go back', callback_data: 'go-back-to-worldwide' }],
+                  [{ text: '◀ Go back ◀', callback_data: 'go-back-to-worldwide' }],
                 ]
               }
             });

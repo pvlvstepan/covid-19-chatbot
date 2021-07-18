@@ -18,23 +18,24 @@ const tests = (bot) => {
 
           const testRates = ((results.tests / results.population) * 100).toFixed(2).toLocaleString();
 
-          const response = `
-          Total COVID-19 completed tests as of ${localTime}\n\n${results.tests.toLocaleString()}\n\n...which is ${testRates}% of the total world population`;
+          const response = `🦠🧫 Total COVID-19 completed tests as of <b><i>${localTime}</i></b> 🧫🦠\n\n\n⭕📊 <b>${results.tests.toLocaleString()}</b>\n\n...which is <b>${testRates}%</b> of the total world population 🌎`;
 
           ctx.telegram.sendMessage(ctx.chat.id, response,
             {
+              parse_mode: 'HTML',
               reply_markup: {
                 inline_keyboard: [
-                  [{ text: 'Go back', callback_data: 'go-back-to-worldwide' }],
+                  [{ text: '◀ Go back ◀', callback_data: 'go-back-to-worldwide' }],
                 ]
               }
             });
         } else {
-          ctx.telegram.sendMessage(ctx.chat.id, 'Something went wrong...',
+          ctx.telegram.sendMessage(ctx.chat.id, 'Something went wrong... 😔',
             {
+              parse_mode: 'HTML',
               reply_markup: {
                 inline_keyboard: [
-                  [{ text: 'Go back', callback_data: 'go-back-to-worldwide' }],
+                  [{ text: '◀ Go back ◀', callback_data: 'go-back-to-worldwide' }],
                 ]
               }
             });
