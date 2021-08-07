@@ -1,4 +1,4 @@
-import getData from "../../../utils/getData";
+const getData = require("../../../utils/getData");
 
 const deaths = (bot) => {
   bot.action('worldwide-deaths', (ctx) => {
@@ -44,4 +44,4 @@ const deaths = (bot) => {
   });
 };
 
-export default deaths;
+module.exports = deaths;

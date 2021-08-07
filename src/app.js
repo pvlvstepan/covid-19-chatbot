@@ -1,11 +1,8 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
-import { Composer } from 'micro-bot';
+const { Composer } = require('micro-bot');
 const bot = new Composer();
 
-import startMenu from './start/index.js';
+const startMenu = require('./start/index.js');
 
 startMenu(bot);
 
-export default bot;
+module.exports = bot;

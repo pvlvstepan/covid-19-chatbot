@@ -1,4 +1,4 @@
-import worldwide from './worldwide/index.js';
+const worldwide = require('./worldwide/index.js');
 
 const startMenu = (bot) => {
   // menu structure
@@ -42,4 +42,4 @@ const startMenu = (bot) => {
   worldwide(bot);
 };
 
-export default startMenu;
+module.exports = startMenu;

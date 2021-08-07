@@ -1,4 +1,4 @@
-import getData from "../../../utils/getData";
+const getData = require("../../../utils/getData");
 
 const recovered = (bot) => {
   bot.action('worldwide-recovered', (ctx) => {
@@ -44,4 +44,4 @@ const recovered = (bot) => {
   });
 };
 
-export default recovered;
+module.exports = recovered;

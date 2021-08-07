@@ -1,4 +1,4 @@
-import getData from "../../../utils/getData";
+const getData = require("../../../utils/getData");
 
 const total = (bot) => {
   bot.action('worldwide-total', (ctx) => {
@@ -43,4 +43,4 @@ const total = (bot) => {
   });
 };
 
-export default total;
+module.exports = total;

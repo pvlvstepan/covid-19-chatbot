@@ -1,4 +1,4 @@
-import getData from "../../../utils/getData";
+const getData = require("../../../utils/getData");
 
 const vaccination = (bot) => {
   bot.action('worldwide-vaccination', (ctx) => {
@@ -60,4 +60,4 @@ const vaccination = (bot) => {
   });
 };
 
-export default vaccination;
+module.exports = vaccination;

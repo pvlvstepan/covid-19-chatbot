@@ -1,4 +1,4 @@
-import getData from "../../../utils/getData";
+const getData = require("../../../utils/getData");
 
 const tests = (bot) => {
   bot.action('worldwide-tests', (ctx) => {
@@ -44,4 +44,4 @@ const tests = (bot) => {
   });
 };
 
-export default tests;
+module.exports = tests;

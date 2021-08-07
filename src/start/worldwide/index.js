@@ -1,12 +1,12 @@
-import menuActionWithCommand from '../../utils/menuActionWithCommand.js';
+const menuActionWithCommand = require('../../utils/menuActionWithCommand.js');
 
-import summary from './summary/index.js';
-import total from './total/index.js';
-import active from './active/index.js';
-import recovered from './recovered/index.js';
-import deaths from './deaths/index.js';
-import vaccination from './vaccination/index.js';
-import tests from './tests/index.js';
+const summary = require('./summary/index.js');
+const total = require('./total/index.js');
+const active = require('./active/index.js');
+const recovered = require('./recovered/index.js');
+const deaths = require('./deaths/index.js');
+const vaccination = require('./vaccination/index.js');
+const tests = require('./tests/index.js');
 
 const worldwide = (bot) => {
   // submenu structure
@@ -36,4 +36,4 @@ const worldwide = (bot) => {
   tests(bot);
 };
 
-export default worldwide;
+module.exports = worldwide;

@@ -13,4 +13,4 @@ const menuActionWithCommand = (bot, command, message, extra) => {
   });
 };
 
-export default menuActionWithCommand;
+module.exports = menuActionWithCommand;

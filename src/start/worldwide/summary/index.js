@@ -1,4 +1,4 @@
-import getData from "../../../utils/getData";
+const getData = require("../../../utils/getData");
 
 const summary = (bot) => {
   bot.action('worldwide-summary', (ctx) => {
@@ -42,4 +42,4 @@ const summary = (bot) => {
   });
 };
 
-export default summary;
+module.exports = summary;
