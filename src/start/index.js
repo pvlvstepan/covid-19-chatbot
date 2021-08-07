@@ -23,7 +23,6 @@ const startMenu = (bot) => {
         reply_markup: {
           inline_keyboard: [
             [{ text: '🌐 Worldwide cases data 📊', callback_data: 'worldwide' }],
-            [{ text: '❌ Quit ❌', callback_data: 'quit' }],
           ]
         }
       }
