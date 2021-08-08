@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "micro-bot"
+    "start": "micro-bot",
+    "dev": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   "homepage": "https://github.com/pvlvstepan/covid-19-chatbot#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "micro-bot": "^2.5.3"
+    "dotenv": "^10.0.0",
+    "micro-bot": "^2.5.3",
+    "telegraf": "^4.4.1"
   }
 }

@@ -25,7 +25,6 @@ const worldwide = (bot) => {
 
   // initialize submenu
   menuActionWithCommand(bot, 'worldwide', '🦠📊 What type of data do you want to see? 📊🦠', worldwide_reply_markup);
-
   // initialize submenu actions
   summary(bot);
   total(bot);

@@ -1,3 +1,4 @@
+const country = require('./country/index.js');
 const worldwide = require('./worldwide/index.js');
 
 const startMenu = (bot) => {
@@ -23,6 +24,7 @@ const startMenu = (bot) => {
         reply_markup: {
           inline_keyboard: [
             [{ text: '🌐 Worldwide cases data 📊', callback_data: 'worldwide' }],
+            [{ text: '🌐 Country cases data 📊', callback_data: 'country' }],
           ]
         }
       }
@@ -40,6 +42,7 @@ const startMenu = (bot) => {
   });
 
   worldwide(bot);
+  country(bot);
 };
 
 module.exports = startMenu;
