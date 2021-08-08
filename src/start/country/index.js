@@ -38,7 +38,7 @@ const country = (bot) => {
               reply_markup: {
                 inline_keyboard: [
                   [{ text: '🦠☣ Latest cases summary', callback_data: `country-summary-${val.countryInfo.iso3}` }],
-                  [{ text: '🦠📉 Total cases', callback_data: `'country-total-${val.countryInfo.iso3}'` }, { text: '🦠🤒 Total active', callback_data: `country-active-${val.countryInfo.iso3}` }],
+                  [{ text: '🦠📉 Total cases', callback_data: `country-total-${val.countryInfo.iso3}` }, { text: '🦠🤒 Total active', callback_data: `country-active-${val.countryInfo.iso3}` }],
                   [{ text: '🦠✅ Total recovered', callback_data: `country-recovered-${val.countryInfo.iso3}` }, { text: '🦠⚰ Total deaths', callback_data: `country-deaths-${val.countryInfo.iso3}` }],
                   [{ text: '🦠💉 Vaccination updates', callback_data: `country-vaccination-${val.countryInfo.iso3}` }],
                   [{ text: '🦠🧫 Tests summary', callback_data: `country-tests-${val.countryInfo.iso3}` }],
